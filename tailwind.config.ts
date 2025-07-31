@@ -52,6 +52,11 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Banking specific colors
+				'bank-primary': 'hsl(var(--bank-primary))',
+				'bank-accent': 'hsl(var(--bank-accent))',
+				'bank-soft-gray': 'hsl(var(--bank-soft-gray))',
+				'bank-light-text': 'hsl(var(--bank-light-text))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
