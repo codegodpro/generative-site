@@ -1,105 +1,121 @@
-import { ArrowRight, Shield, Smartphone, CreditCard, TrendingUp, Users, Award, CheckCircle } from 'lucide-react';
+import { ArrowRight, Shield, Smartphone, CreditCard, TrendingUp, Calculator, DollarSign, PieChart, Building, Users, Award, CheckCircle, Home as HomeIcon, Car, Briefcase, CreditCard as CardIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import heroImage from '@/assets/hero-banking.jpg';
 
 const Home = () => {
-  const features = [
+  const promotionalCards = [
     {
-      icon: Shield,
-      title: 'Secure Banking',
-      description: 'Advanced encryption and fraud protection to keep your money safe.'
+      title: 'Special Offers',
+      subtitle: 'Up to 15% Annual Return',
+      description: 'Credit Card Promotion',
+      color: 'bg-gradient-to-r from-pink-500 to-pink-600',
+      textColor: 'text-white'
     },
     {
-      icon: Smartphone,
-      title: 'Mobile Banking',
-      description: 'Bank anywhere, anytime with our award-winning mobile app.'
+      title: 'Retirement Planning',
+      subtitle: '21,000 TL and more',
+      description: 'Guaranteed Promotion!',
+      color: 'bg-gradient-to-r from-bank-primary to-blue-600',
+      textColor: 'text-white'
     },
     {
-      icon: CreditCard,
-      title: 'Smart Cards',
-      description: 'Contactless payments with cashback rewards and no annual fees.'
+      title: 'Future Investment',
+      subtitle: 'Start Your Journey',
+      description: 'Investment Solutions',
+      color: 'bg-gradient-to-r from-green-500 to-green-600',
+      textColor: 'text-white'
     },
     {
-      icon: TrendingUp,
-      title: 'Investment Tools',
-      description: 'Grow your wealth with our professional investment advisory services.'
+      title: 'Security Applications',
+      subtitle: 'Your Safety First',
+      description: 'Advanced Security',
+      color: 'bg-gradient-to-r from-blue-400 to-blue-500',
+      textColor: 'text-white'
     }
   ];
 
-  const stats = [
-    { number: '500K+', label: 'Happy Customers' },
-    { number: '50+', label: 'Years of Trust' },
-    { number: '$2B+', label: 'Assets Managed' },
-    { number: '99.9%', label: 'Uptime' }
+  const services = [
+    { icon: HomeIcon, title: 'Mortgage', subtitle: 'Loan Services' },
+    { icon: Calculator, title: 'Calculators', subtitle: 'Financial Tools' },
+    { icon: PieChart, title: 'Deposits', subtitle: 'Investment' },
+    { icon: TrendingUp, title: 'Investment', subtitle: 'Portfolio' },
+    { icon: CreditCard, title: 'Loan Cards', subtitle: 'Easy Credit' },
+    { icon: Briefcase, title: 'Corporate', subtitle: 'Business Banking' },
+    { icon: CardIcon, title: 'Credit Cards', subtitle: 'All Cards' },
+    { icon: Users, title: 'Funding and', subtitle: 'Support' }
   ];
 
-  const partners = [
-    'Visa', 'Mastercard', 'FDIC', 'Swift', 'Zelle'
+  const additionalServices = [
+    { icon: Shield, title: 'Internet Banking', subtitle: 'Digital Services' },
+    { icon: Smartphone, title: 'Mobile Banking', subtitle: 'Apps' },
+    { icon: Building, title: 'ATM & Branches', subtitle: 'Locations' },
+    { icon: Award, title: 'Awards & Recognition', subtitle: 'Achievements' },
+    { icon: CheckCircle, title: 'Customer Services', subtitle: 'Support' }
+  ];
+
+  const exchangeRates = [
+    { currency: 'USD', buy: '30.9458', sell: '31.0298', flag: '🇺🇸' },
+    { currency: 'EUR', buy: '33.8441', sell: '33.9508', flag: '🇪🇺' },
+    { currency: 'GBP', buy: '39.1429', sell: '39.4419', flag: '🇬🇧' },
+    { currency: 'Gold', buy: '4,293.67', sell: '4,340.71', flag: '🥇' }
+  ];
+
+  const newsArticles = [
+    {
+      title: 'Digital transformation in banking reaches all branches',
+      description: 'Banking services modernization continues with new digital solutions...',
+      date: '2 days ago'
+    },
+    {
+      title: 'New Student Support Project Launched',
+      description: 'Supporting education with special loan packages for students...',
+      date: '3 days ago'
+    },
+    {
+      title: 'Annual Fund Campaign Announced',
+      description: 'Contributing to community development with our annual social responsibility project...',
+      date: '1 week ago'
+    }
+  ];
+
+  const lifeServices = [
+    {
+      title: 'Mortgage Account Packages Need',
+      description: 'Mortgage account applications are now much easier. Get the home of your dreams.',
+      image: '👨‍👩‍👧‍👦'
+    },
+    {
+      title: 'EFT Service Available 24/7',
+      description: 'Transfer money anytime with 24/7 EFT service availability.',
+      image: '💳'
+    },
+    {
+      title: 'Financial Planning for Young People',
+      description: 'Special financial planning packages designed for young people and students.',
+      image: '🎓'
+    }
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-bank-soft-gray">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-gradient-to-br from-bank-primary via-bank-primary/90 to-bank-primary/80"
-          style={{
-            backgroundImage: `url(${heroImage})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundBlendMode: 'overlay'
-          }}
-        />
-        <div className="relative container mx-auto px-4 py-24 lg:py-32">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              Banking Made
-              <span className="text-bank-accent"> Simple</span> &
-              <span className="text-bank-accent"> Secure</span>
-            </h1>
-            <p className="text-xl text-bank-light-text mb-8 leading-relaxed">
-              Experience the future of banking with our innovative digital solutions. 
-              From everyday banking to long-term investments, we're here to help you achieve your financial goals.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-bank-accent text-bank-primary hover:bg-bank-accent/90">
-                Open Account Today
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-bank-primary">
-                Learn More
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-16 lg:py-24 bg-background">
+      {/* Promotional Cards Section */}
+      <section className="py-6 bg-bank-soft-gray">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              Why Choose SecureBank?
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              We combine cutting-edge technology with personalized service to provide you with the best banking experience.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <Card key={index} className="border-border shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <CardContent className="p-8 text-center">
-                  <div className="bg-bank-accent/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <feature.icon className="h-8 w-8 text-bank-accent" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {promotionalCards.map((card, index) => (
+              <Card key={index} className={`${card.color} border-0 overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1`}>
+                <CardContent className="p-6">
+                  <div className={card.textColor}>
+                    <h3 className="font-bold text-lg mb-2">{card.title}</h3>
+                    <p className="text-2xl font-bold mb-1">{card.subtitle}</p>
+                    <p className="text-sm opacity-90">{card.description}</p>
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-3">{feature.title}</h3>
-                  <p className="text-muted-foreground">{feature.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -107,53 +123,176 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-bank-soft-gray">
+      {/* Loan Calculator Section */}
+      <section className="py-8 bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl lg:text-4xl font-bold text-bank-primary mb-2">{stat.number}</div>
-                <div className="text-muted-foreground">{stat.label}</div>
+          <Card className="max-w-4xl mx-auto">
+            <CardContent className="p-8">
+              <h2 className="text-2xl font-bold text-center text-bank-primary mb-8">Loan Calculator</h2>
+              
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div className="space-y-6">
+                  <div className="flex gap-4 border-b border-border pb-4">
+                    <button className="text-bank-accent font-semibold border-b-2 border-bank-accent pb-2">Need</button>
+                    <button className="text-muted-foreground">Housing</button>
+                    <button className="text-muted-foreground">Vehicle</button>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    <div>
+                      <label className="block text-sm font-medium mb-2">Need Type</label>
+                      <Select>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Need Loan Interest Rate" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="personal">Personal Loan</SelectItem>
+                          <SelectItem value="vehicle">Vehicle Loan</SelectItem>
+                          <SelectItem value="housing">Housing Loan</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+                    
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm font-medium mb-2">Loan Amount (TL)</label>
+                        <Input placeholder="100,000" />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium mb-2">Term (Month)</label>
+                        <Input placeholder="12" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-bank-soft-gray p-6 rounded-lg">
+                  <div className="text-center">
+                    <p className="text-sm text-muted-foreground mb-2">Monthly Payment</p>
+                    <p className="text-3xl font-bold text-bank-primary">11,577.13 TL</p>
+                    <p className="text-sm text-muted-foreground mt-1">Interest Rate: %4.2</p>
+                  </div>
+                  
+                  <div className="flex gap-3 mt-6">
+                    <Button className="flex-1 bg-pink-500 hover:bg-pink-600 text-white">
+                      Apply Now
+                    </Button>
+                    <Button variant="outline" className="flex-1">
+                      Loan Details
+                    </Button>
+                  </div>
+                  
+                  <p className="text-xs text-muted-foreground mt-4">
+                    *This calculation is informational and the actual loan conditions may vary.
+                  </p>
+                </div>
               </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-8 bg-bank-soft-gray">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
+            {services.map((service, index) => (
+              <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+                <CardContent className="p-4">
+                  <service.icon className="h-8 w-8 text-bank-primary mx-auto mb-2" />
+                  <h4 className="font-semibold text-xs text-bank-primary">{service.title}</h4>
+                  <p className="text-xs text-muted-foreground">{service.subtitle}</p>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 lg:py-24 bg-bank-primary">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-bank-light-text mb-8 max-w-2xl mx-auto">
-            Join thousands of satisfied customers who trust SecureBank with their financial future.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-bank-accent text-bank-primary hover:bg-bank-accent/90">
-              Open Account
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-bank-primary">
-              Schedule Consultation
-            </Button>
+      {/* Additional Services */}
+      <section className="py-6 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+            {additionalServices.map((service, index) => (
+              <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+                <CardContent className="p-6">
+                  <service.icon className="h-10 w-10 text-bank-primary mx-auto mb-3" />
+                  <h4 className="font-semibold text-sm text-bank-primary mb-1">{service.title}</h4>
+                  <p className="text-xs text-muted-foreground">{service.subtitle}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Partners Section */}
-      <section className="py-12 bg-background border-t border-border">
+      {/* Exchange Rates */}
+      <section className="py-8 bg-bank-soft-gray">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-8">
-            <p className="text-muted-foreground">Trusted by industry leaders</p>
-          </div>
-          <div className="flex flex-wrap items-center justify-center gap-8 opacity-60">
-            {partners.map((partner, index) => (
-              <div key={index} className="text-lg font-semibold text-muted-foreground">
-                {partner}
+          <Card>
+            <CardContent className="p-6">
+              <h2 className="text-xl font-bold text-bank-primary mb-6">SecureBank Exchange Rates</h2>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                {exchangeRates.map((rate, index) => (
+                  <div key={index} className="text-center">
+                    <div className="text-2xl mb-2">{rate.flag}</div>
+                    <div className="font-bold text-bank-primary mb-1">{rate.currency}</div>
+                    <div className="text-sm text-muted-foreground">
+                      <div>Buy: {rate.buy}</div>
+                      <div>Sell: {rate.sell}</div>
+                    </div>
+                  </div>
+                ))}
               </div>
+              <div className="flex gap-3 mt-6 justify-center">
+                <Button variant="outline" size="sm">View All Rates</Button>
+                <Button className="bg-pink-500 hover:bg-pink-600 text-white" size="sm">Exchange Calculator</Button>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* News Section */}
+      <section className="py-8 bg-background">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl font-bold text-bank-primary mb-6">SecureBank News</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            {newsArticles.map((article, index) => (
+              <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="p-6">
+                  <h3 className="font-semibold text-bank-primary mb-3">{article.title}</h3>
+                  <p className="text-sm text-muted-foreground mb-4">{article.description}</p>
+                  <p className="text-xs text-muted-foreground">{article.date}</p>
+                  <Button variant="link" className="text-bank-accent p-0 h-auto mt-2">Read More</Button>
+                </CardContent>
+              </Card>
             ))}
+          </div>
+          <div className="text-center">
+            <Button variant="outline">View All News</Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Life Services */}
+      <section className="py-8 bg-bank-soft-gray">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl font-bold text-bank-primary mb-6 text-center">With You at Every Moment of Life!</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {lifeServices.map((service, index) => (
+              <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="p-6">
+                  <div className="text-4xl mb-4">{service.image}</div>
+                  <h3 className="font-semibold text-bank-primary mb-3">{service.title}</h3>
+                  <p className="text-sm text-muted-foreground mb-4">{service.description}</p>
+                  <Button variant="link" className="text-bank-accent p-0 h-auto">Read More</Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <Button variant="outline">View All Blog Posts</Button>
           </div>
         </div>
       </section>
