@@ -29,6 +29,13 @@ const Home = () => {
       link: '/maximum'
     },
     {
+      title: 'Mobile Banking',
+      subtitle: 'Everything You Need',
+      description: 'Most Trusted mobile online banking app.',
+      image: '/attached_assets/generated_images/Maximum_credit_card_product_3a804f7d.png',
+      link: '/maximum'
+    },
+    {
       title: 'Capital Market',
       subtitle: 'Investment Products',
       description: 'Wide Range of Capital Market Products is at İşbank!',
