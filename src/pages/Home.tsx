@@ -102,13 +102,6 @@ const Home = () => {
     }
   ];
 
-  const additionalServices = [
-    { icon: Shield, title: 'Internet Banking', subtitle: 'Digital Services' },
-    { icon: Smartphone, title: 'Mobile Banking', subtitle: 'Apps' },
-    { icon: Building, title: 'ATM & Branches', subtitle: 'Locations' },
-    { icon: Award, title: 'Awards & Recognition', subtitle: 'Achievements' },
-    { icon: CheckCircle, title: 'Customer Services', subtitle: 'Support' }
-  ];
 
   const exchangeRates = [
     { currency: 'USD', buy: '30.9458', sell: '31.0298', flag: '🇺🇸' },
