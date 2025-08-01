@@ -109,7 +109,7 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {promotionalCards.map((card, index) => (
-              <Card key={index} className={`${card.color} border-0 overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1`}>
+              <Card key={index} className={`${card.color} border-0 overflow-hidden card-3d shadow-3d`}>
                 <CardContent className="p-6">
                   <div className={card.textColor}>
                     <h3 className="font-bold text-lg mb-2">{card.title}</h3>
@@ -126,7 +126,7 @@ const Home = () => {
       {/* Loan Calculator Section */}
       <section className="py-8 bg-background">
         <div className="container mx-auto px-4">
-          <Card className="max-w-4xl mx-auto">
+          <Card className="max-w-4xl mx-auto glass-card shadow-3d">
             <CardContent className="p-8">
               <h2 className="text-2xl font-bold text-center text-bank-primary mb-8">Loan Calculator</h2>
               
@@ -166,7 +166,7 @@ const Home = () => {
                   </div>
                 </div>
                 
-                <div className="bg-bank-soft-gray p-6 rounded-lg">
+                <div className="glass-card p-6 rounded-lg">
                   <div className="text-center">
                     <p className="text-sm text-muted-foreground mb-2">Monthly Payment</p>
                     <p className="text-3xl font-bold text-bank-primary">11,577.13 TL</p>
@@ -174,10 +174,10 @@ const Home = () => {
                   </div>
                   
                   <div className="flex gap-3 mt-6">
-                    <Button className="flex-1 bg-pink-500 hover:bg-pink-600 text-white">
+                    <Button className="flex-1 bg-pink-500 hover:bg-pink-600 text-white shadow-3d hover:shadow-3d-hover transition-all duration-300">
                       Apply Now
                     </Button>
-                    <Button variant="outline" className="flex-1">
+                    <Button variant="outline" className="flex-1 shadow-3d hover:shadow-3d-hover transition-all duration-300">
                       Loan Details
                     </Button>
                   </div>
@@ -197,9 +197,11 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
             {services.map((service, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+              <Card key={index} className="text-center card-3d glass-card cursor-pointer">
                 <CardContent className="p-4">
-                  <service.icon className="h-8 w-8 text-bank-primary mx-auto mb-2" />
+                  <div className="icon-container mx-auto mb-2 w-fit">
+                    <service.icon className="h-6 w-6 text-bank-primary" />
+                  </div>
                   <h4 className="font-semibold text-xs text-bank-primary">{service.title}</h4>
                   <p className="text-xs text-muted-foreground">{service.subtitle}</p>
                 </CardContent>
@@ -214,9 +216,11 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
             {additionalServices.map((service, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+              <Card key={index} className="text-center card-3d glass-card cursor-pointer">
                 <CardContent className="p-6">
-                  <service.icon className="h-10 w-10 text-bank-primary mx-auto mb-3" />
+                  <div className="icon-container mx-auto mb-3 w-fit">
+                    <service.icon className="h-8 w-8 text-bank-primary" />
+                  </div>
                   <h4 className="font-semibold text-sm text-bank-primary mb-1">{service.title}</h4>
                   <p className="text-xs text-muted-foreground">{service.subtitle}</p>
                 </CardContent>
@@ -229,7 +233,7 @@ const Home = () => {
       {/* Exchange Rates */}
       <section className="py-8 bg-bank-soft-gray">
         <div className="container mx-auto px-4">
-          <Card>
+          <Card className="glass-card shadow-3d">
             <CardContent className="p-6">
               <h2 className="text-xl font-bold text-bank-primary mb-6">SecureBank Exchange Rates</h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -245,8 +249,8 @@ const Home = () => {
                 ))}
               </div>
               <div className="flex gap-3 mt-6 justify-center">
-                <Button variant="outline" size="sm">View All Rates</Button>
-                <Button className="bg-pink-500 hover:bg-pink-600 text-white" size="sm">Exchange Calculator</Button>
+                <Button variant="outline" size="sm" className="shadow-3d hover:shadow-3d-hover transition-all duration-300">View All Rates</Button>
+                <Button className="bg-pink-500 hover:bg-pink-600 text-white shadow-3d hover:shadow-3d-hover transition-all duration-300" size="sm">Exchange Calculator</Button>
               </div>
             </CardContent>
           </Card>
@@ -259,12 +263,12 @@ const Home = () => {
           <h2 className="text-2xl font-bold text-bank-primary mb-6">SecureBank News</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
             {newsArticles.map((article, index) => (
-              <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <Card key={index} className="card-3d glass-card">
                 <CardContent className="p-6">
                   <h3 className="font-semibold text-bank-primary mb-3">{article.title}</h3>
                   <p className="text-sm text-muted-foreground mb-4">{article.description}</p>
                   <p className="text-xs text-muted-foreground">{article.date}</p>
-                  <Button variant="link" className="text-bank-accent p-0 h-auto mt-2">Read More</Button>
+                  <Button variant="link" className="text-bank-accent p-0 h-auto mt-2 hover:scale-105 transition-all duration-200">Read More</Button>
                 </CardContent>
               </Card>
             ))}
@@ -281,12 +285,12 @@ const Home = () => {
           <h2 className="text-2xl font-bold text-bank-primary mb-6 text-center">With You at Every Moment of Life!</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {lifeServices.map((service, index) => (
-              <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <Card key={index} className="card-3d glass-card">
                 <CardContent className="p-6">
                   <div className="text-4xl mb-4">{service.image}</div>
                   <h3 className="font-semibold text-bank-primary mb-3">{service.title}</h3>
                   <p className="text-sm text-muted-foreground mb-4">{service.description}</p>
-                  <Button variant="link" className="text-bank-accent p-0 h-auto">Read More</Button>
+                  <Button variant="link" className="text-bank-accent p-0 h-auto hover:scale-105 transition-all duration-200">Read More</Button>
                 </CardContent>
               </Card>
             ))}
