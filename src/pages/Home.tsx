@@ -103,13 +103,6 @@ const Home = () => {
   ];
 
 
-  const exchangeRates = [
-    { currency: 'USD', buy: '30.9458', sell: '31.0298', flag: '🇺🇸' },
-    { currency: 'EUR', buy: '33.8441', sell: '33.9508', flag: '🇪🇺' },
-    { currency: 'GBP', buy: '39.1429', sell: '39.4419', flag: '🇬🇧' },
-    { currency: 'Gold', buy: '4,293.67', sell: '4,340.71', flag: '🥇' }
-  ];
-
   const newsArticles = [
     {
       title: 'Digital transformation in banking reaches all branches',
