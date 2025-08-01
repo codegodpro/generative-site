@@ -1,12 +1,18 @@
+import React, { useState } from 'react';
 import { ArrowRight, Shield, Smartphone, CreditCard, TrendingUp, Calculator, DollarSign, PieChart, Building, Users, Award, CheckCircle, Home as HomeIcon, Car, Briefcase, CreditCard as CardIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
 const Home = () => {
+  const [activeTab, setActiveTab] = useState('need');
+  const [loanAmount, setLoanAmount] = useState('100000');
+  const [loanTerm, setLoanTerm] = useState('12');
+
   const promotionalCards = [
     {
       title: 'Special Offers',
@@ -104,22 +110,28 @@ const Home = () => {
     <div className="min-h-screen bg-bank-soft-gray">
       <Navigation />
       
-      {/* Promotional Cards Section */}
+      {/* Promotional Cards Carousel Section */}
       <section className="py-6 bg-bank-soft-gray">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {promotionalCards.map((card, index) => (
-              <Card key={index} className={`${card.color} border-0 overflow-hidden card-3d shadow-3d`}>
-                <CardContent className="p-6">
-                  <div className={card.textColor}>
-                    <h3 className="font-bold text-lg mb-2">{card.title}</h3>
-                    <p className="text-2xl font-bold mb-1">{card.subtitle}</p>
-                    <p className="text-sm opacity-90">{card.description}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+          <Carousel className="w-full max-w-6xl mx-auto">
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {promotionalCards.map((card, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/4">
+                  <Card className={`${card.color} border-0 overflow-hidden card-3d shadow-3d transform transition-all duration-300 hover:scale-105`}>
+                    <CardContent className="p-6">
+                      <div className={card.textColor}>
+                        <h3 className="font-bold text-lg mb-2">{card.title}</h3>
+                        <p className="text-2xl font-bold mb-1">{card.subtitle}</p>
+                        <p className="text-sm opacity-90">{card.description}</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="glass-card border-0 shadow-3d hover:shadow-3d-hover" />
+            <CarouselNext className="glass-card border-0 shadow-3d hover:shadow-3d-hover" />
+          </Carousel>
         </div>
       </section>
 
@@ -133,9 +145,36 @@ const Home = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div className="space-y-6">
                   <div className="flex gap-4 border-b border-border pb-4">
-                    <button className="text-bank-accent font-semibold border-b-2 border-bank-accent pb-2">Need</button>
-                    <button className="text-muted-foreground">Housing</button>
-                    <button className="text-muted-foreground">Vehicle</button>
+                    <button 
+                      onClick={() => setActiveTab('need')}
+                      className={`font-semibold pb-2 transition-all duration-200 ${
+                        activeTab === 'need' 
+                          ? 'text-bank-primary border-b-2 border-bank-primary' 
+                          : 'text-muted-foreground hover:text-bank-primary'
+                      }`}
+                    >
+                      Need
+                    </button>
+                    <button 
+                      onClick={() => setActiveTab('housing')}
+                      className={`font-semibold pb-2 transition-all duration-200 ${
+                        activeTab === 'housing' 
+                          ? 'text-bank-primary border-b-2 border-bank-primary' 
+                          : 'text-muted-foreground hover:text-bank-primary'
+                      }`}
+                    >
+                      Housing
+                    </button>
+                    <button 
+                      onClick={() => setActiveTab('vehicle')}
+                      className={`font-semibold pb-2 transition-all duration-200 ${
+                        activeTab === 'vehicle' 
+                          ? 'text-bank-primary border-b-2 border-bank-primary' 
+                          : 'text-muted-foreground hover:text-bank-primary'
+                      }`}
+                    >
+                      Vehicle
+                    </button>
                   </div>
                   
                   <div className="space-y-4">

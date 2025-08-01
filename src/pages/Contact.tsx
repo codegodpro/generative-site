@@ -83,10 +83,10 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {contactMethods.map((method, index) => (
-              <Card key={index} className="border-border shadow-lg hover:shadow-xl transition-all duration-300 text-center">
+              <Card key={index} className="glass-card shadow-3d hover:shadow-3d-hover card-3d border-0 text-center">
                 <CardContent className="p-8">
-                  <div className="bg-bank-accent/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <method.icon className="h-8 w-8 text-bank-accent" />
+                  <div className="icon-container mx-auto mb-6 w-fit">
+                    <method.icon className="h-8 w-8 text-bank-primary" />
                   </div>
                   <h3 className="text-xl font-semibold text-foreground mb-2">{method.title}</h3>
                   <p className="text-muted-foreground mb-3">{method.description}</p>
@@ -110,7 +110,7 @@ const Contact = () => {
                 Fill out the form below and we'll get back to you as soon as possible.
               </p>
               
-              <Card className="border-border shadow-lg">
+              <Card className="glass-card shadow-3d border-0">
                 <CardContent className="p-8">
                   <form className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

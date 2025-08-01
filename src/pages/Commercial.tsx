@@ -139,10 +139,10 @@ const Commercial = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="border-border shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <Card key={index} className="glass-card shadow-3d hover:shadow-3d-hover card-3d border-0">
                 <CardHeader>
-                  <div className="bg-bank-accent/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                    <service.icon className="h-6 w-6 text-bank-accent" />
+                  <div className="icon-container mb-4">
+                    <service.icon className="h-6 w-6 text-bank-primary" />
                   </div>
                   <CardTitle className="text-xl text-foreground">{service.title}</CardTitle>
                 </CardHeader>
@@ -158,7 +158,7 @@ const Commercial = () => {
                     ))}
                   </div>
                   
-                  <Button className="w-full bg-bank-primary hover:bg-bank-primary/90 text-white">
+                  <Button className="w-full bg-bank-primary hover:bg-bank-primary/90 text-white shadow-3d hover:shadow-3d-hover transition-all duration-300">
                     {service.cta}
                   </Button>
                 </CardContent>
@@ -182,7 +182,7 @@ const Commercial = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="border-border shadow-lg">
+              <Card key={index} className="glass-card shadow-3d hover:shadow-3d-hover card-3d border-0">
                 <CardContent className="p-8">
                   <div className="text-bank-accent text-4xl mb-4">"</div>
                   <p className="text-muted-foreground mb-6 leading-relaxed">{testimonial.quote}</p>
