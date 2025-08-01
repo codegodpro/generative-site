@@ -9,38 +9,34 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
 const Home = () => {
-  const [activeTab, setActiveTab] = useState('need');
-  const [loanAmount, setLoanAmount] = useState('100000');
-  const [loanTerm, setLoanTerm] = useState('12');
-
   const promotionalCards = [
     {
-      title: 'Special Offers',
-      subtitle: 'Up to 15% Annual Return',
-      description: 'Credit Card Promotion',
-      color: 'bg-gradient-to-r from-pink-500 to-pink-600',
-      textColor: 'text-white'
+      title: 'Your Needs',
+      subtitle: 'Distinguished Loans',
+      description: 'Your needs are distinct. Your loan is distinguished.',
+      image: '/attached_assets/generated_images/Banking_loan_professional_image_5c558072.png',
+      link: '/loans'
     },
     {
-      title: 'Retirement Planning',
-      subtitle: '21,000 TL and more',
-      description: 'Guaranteed Promotion!',
-      color: 'bg-gradient-to-r from-bank-primary to-blue-600',
-      textColor: 'text-white'
+      title: 'Maximum Card',
+      subtitle: 'Everything You Need',
+      description: 'Maximum Card, provides everything you need.',
+      image: '/attached_assets/generated_images/Maximum_credit_card_product_3a804f7d.png',
+      link: '/maximum'
     },
     {
-      title: 'Future Investment',
-      subtitle: 'Start Your Journey',
-      description: 'Investment Solutions',
-      color: 'bg-gradient-to-r from-green-500 to-green-600',
-      textColor: 'text-white'
+      title: 'İşCep',
+      subtitle: 'Mobile Banking',
+      description: "Turkey's most comprehensive mobile banking app İşCep!",
+      image: '/attached_assets/generated_images/Mobile_banking_app_interface_b9a0faf2.png',
+      link: '/iscep'
     },
     {
-      title: 'Security Applications',
-      subtitle: 'Your Safety First',
-      description: 'Advanced Security',
-      color: 'bg-gradient-to-r from-blue-400 to-blue-500',
-      textColor: 'text-white'
+      title: 'Capital Market',
+      subtitle: 'Investment Products',
+      description: 'Wide Range of Capital Market Products is at İşbank!',
+      image: '/attached_assets/generated_images/Capital_market_investment_concept_1761434e.png',
+      link: '/deposit-and-investment'
     }
   ];
 
@@ -70,24 +66,6 @@ const Home = () => {
     { currency: 'Gold', buy: '4,293.67', sell: '4,340.71', flag: '🥇' }
   ];
 
-  const newsArticles = [
-    {
-      title: 'Digital transformation in banking reaches all branches',
-      description: 'Banking services modernization continues with new digital solutions...',
-      date: '2 days ago'
-    },
-    {
-      title: 'New Student Support Project Launched',
-      description: 'Supporting education with special loan packages for students...',
-      date: '3 days ago'
-    },
-    {
-      title: 'Annual Fund Campaign Announced',
-      description: 'Contributing to community development with our annual social responsibility project...',
-      date: '1 week ago'
-    }
-  ];
-
   const lifeServices = [
     {
       title: 'Mortgage Account Packages Need',
@@ -103,6 +81,24 @@ const Home = () => {
       title: 'Financial Planning for Young People',
       description: 'Special financial planning packages designed for young people and students.',
       image: '🎓'
+    }
+  ];
+
+  const newsArticles = [
+    {
+      title: 'Digital transformation in banking reaches all branches',
+      description: 'Banking services modernization continues with new digital solutions...',
+      date: '2 days ago'
+    },
+    {
+      title: 'New Student Support Project Launched',
+      description: 'Supporting education with special loan packages for students...',
+      date: '3 days ago'
+    },
+    {
+      title: 'Annual Fund Campaign Announced',
+      description: 'Contributing to community development with our annual social responsibility project...',
+      date: '1 week ago'
     }
   ];
 
