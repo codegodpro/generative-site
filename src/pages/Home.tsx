@@ -29,13 +29,6 @@ const Home = () => {
       link: '/maximum'
     },
     {
-      title: 'İşCep',
-      subtitle: 'Mobile Banking',
-      description: "Turkey's most comprehensive mobile banking app İşCep!",
-      image: '/attached_assets/generated_images/Mobile_banking_app_interface_b9a0faf2.png',
-      link: '/iscep'
-    },
-    {
       title: 'Capital Market',
       subtitle: 'Investment Products',
       description: 'Wide Range of Capital Market Products is at İşbank!',
