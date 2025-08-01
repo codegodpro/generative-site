@@ -15,7 +15,6 @@ const Home = () => {
 
   const promotionalCards = [
     {
-     {
       title: 'Your Needs',
       subtitle: 'Distinguished Loans',
       description: 'Your needs are distinct. Your loan is distinguished.',
