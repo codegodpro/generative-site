@@ -66,42 +66,6 @@ const Home = () => {
     { currency: 'Gold', buy: '4,293.67', sell: '4,340.71', flag: '🥇' }
   ];
 
-  const newsArticles = [
-    {
-      title: 'Digital transformation in banking reaches all branches',
-      description: 'Banking services modernization continues with new digital solutions...',
-      date: '2 days ago'
-    },
-    {
-      title: 'New Student Support Project Launched',
-      description: 'Supporting education with special loan packages for students...',
-      date: '3 days ago'
-    },
-    {
-      title: 'Annual Fund Campaign Announced',
-      description: 'Contributing to community development with our annual social responsibility project...',
-      date: '1 week ago'
-    }
-  ];
-
-  const lifeServices = [
-    {
-      title: 'Mortgage Account Packages Need',
-      description: 'Mortgage account applications are now much easier. Get the home of your dreams.',
-      image: '👨‍👩‍👧‍👦'
-    },
-    {
-      title: 'EFT Service Available 24/7',
-      description: 'Transfer money anytime with 24/7 EFT service availability.',
-      image: '💳'
-    },
-    {
-      title: 'Financial Planning for Young People',
-      description: 'Special financial planning packages designed for young people and students.',
-      image: '🎓'
-    }
-  ];
-
 
   const newsArticles = [
     {
