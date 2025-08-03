@@ -117,7 +117,7 @@ const Home = () => {
             <CarouselContent className="-ml-2 md:-ml-4">
               {promotionalCards.map((card, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/4">
-                  <Card className="glass-card border-0 overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-3d-hover">
+                  <Card className="glass-card border overflow-hidden transform transition-all duration-300 hover:scale-105">
                     <div 
                       className="relative h-48 bg-cover bg-center" 
                       style={{ backgroundImage: `url(${card.image})` }}
@@ -133,8 +133,8 @@ const Home = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="glass-card border-0 shadow-3d hover:shadow-3d-hover text-bank-primary" />
-            <CarouselNext className="glass-card border-0 shadow-3d hover:shadow-3d-hover text-bank-primary" />
+            <CarouselPrevious className="glass-card border text-bank-primary" />
+            <CarouselNext className="glass-card border text-bank-primary" />
           </Carousel>
         </div>
       </section>
@@ -142,7 +142,7 @@ const Home = () => {
       {/* Loan Calculator Section */}
       <section className="py-8 bg-background">
         <div className="container mx-auto px-4">
-          <Card className="max-w-4xl mx-auto glass-card shadow-3d">
+          <Card className="max-w-4xl mx-auto glass-card border">
             <CardContent className="p-8">
               <h2 className="text-2xl font-bold text-center text-bank-primary mb-8">Loan Calculator</h2>
               
@@ -209,7 +209,7 @@ const Home = () => {
                   </div>
                 </div>
                 
-                <div className="glass-card p-6 rounded-lg">
+                <div className="glass-card border p-6 rounded-lg">
                   <div className="text-center">
                     <p className="text-sm text-muted-foreground mb-2">Monthly Payment</p>
                     <p className="text-3xl font-bold text-bank-primary">11,577.13 TL</p>
@@ -217,10 +217,10 @@ const Home = () => {
                   </div>
                   
                   <div className="flex gap-3 mt-6">
-                    <Button className="flex-1 bg-bank-primary hover:bg-bank-primary/90 text-white shadow-3d hover:shadow-3d-hover transition-all duration-300">
+                    <Button className="flex-1 bg-bank-primary hover:bg-bank-primary/90 text-white transition-all duration-300">
                       Apply Now
                     </Button>
-                    <Button variant="outline" className="flex-1 glass-card border-0 shadow-3d hover:shadow-3d-hover transition-all duration-300">
+                    <Button variant="outline" className="flex-1 glass-card transition-all duration-300">
                       Loan Details
                     </Button>
                   </div>
@@ -240,7 +240,7 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
             {services.map((service, index) => (
-              <Card key={index} className="text-center glass-card cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-3d-hover">
+              <Card key={index} className="text-center glass-card border cursor-pointer transform transition-all duration-300 hover:scale-105">
                 <CardContent className="p-4">
                   <div className="icon-container mx-auto mb-2 w-fit">
                     <service.icon className="h-6 w-6 text-bank-primary" />
@@ -259,7 +259,7 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
             {additionalServices.map((service, index) => (
-              <Card key={index} className="text-center glass-card cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-3d-hover">
+              <Card key={index} className="text-center glass-card border cursor-pointer transform transition-all duration-300 hover:scale-105">
                 <CardContent className="p-6">
                   <div className="icon-container mx-auto mb-3 w-fit">
                     <service.icon className="h-8 w-8 text-bank-primary" />
@@ -276,7 +276,7 @@ const Home = () => {
       {/* Exchange Rates */}
       <section className="py-8 bg-bank-soft-gray">
         <div className="container mx-auto px-4">
-          <Card className="glass-card shadow-3d">
+          <Card className="glass-card border">
             <CardContent className="p-6">
               <h2 className="text-xl font-bold text-bank-primary mb-6">SecureBank Exchange Rates</h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -292,8 +292,8 @@ const Home = () => {
                 ))}
               </div>
               <div className="flex gap-3 mt-6 justify-center">
-                <Button variant="outline" size="sm" className="glass-card border-0 shadow-3d hover:shadow-3d-hover transition-all duration-300">View All Rates</Button>
-                <Button className="bg-bank-primary hover:bg-bank-primary/90 text-white shadow-3d hover:shadow-3d-hover transition-all duration-300" size="sm">Exchange Calculator</Button>
+                <Button variant="outline" size="sm" className="glass-card transition-all duration-300">View All Rates</Button>
+                <Button className="bg-bank-primary hover:bg-bank-primary/90 text-white transition-all duration-300" size="sm">Exchange Calculator</Button>
               </div>
             </CardContent>
           </Card>
@@ -306,7 +306,7 @@ const Home = () => {
           <h2 className="text-2xl font-bold text-bank-primary mb-6">SecureBank News</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
             {newsArticles.map((article, index) => (
-              <Card key={index} className="glass-card transform transition-all duration-300 hover:scale-105 hover:shadow-3d-hover">
+              <Card key={index} className="glass-card border transform transition-all duration-300 hover:scale-105">
                 <CardContent className="p-6">
                   <h3 className="font-semibold text-bank-primary mb-3">{article.title}</h3>
                   <p className="text-sm text-muted-foreground mb-4">{article.description}</p>
@@ -317,7 +317,7 @@ const Home = () => {
             ))}
           </div>
           <div className="text-center">
-            <Button variant="outline" className="glass-card border-0 shadow-3d hover:shadow-3d-hover transition-all duration-300">View All News</Button>
+            <Button variant="outline" className="glass-card transition-all duration-300">View All News</Button>
           </div>
         </div>
       </section>
@@ -328,7 +328,7 @@ const Home = () => {
           <h2 className="text-2xl font-bold text-bank-primary mb-6 text-center">With You at Every Moment of Life!</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {lifeServices.map((service, index) => (
-              <Card key={index} className="glass-card transform transition-all duration-300 hover:scale-105 hover:shadow-3d-hover">
+              <Card key={index} className="glass-card border transform transition-all duration-300 hover:scale-105">
                 <CardContent className="p-6">
                   <div className="text-4xl mb-4">{service.image}</div>
                   <h3 className="font-semibold text-bank-primary mb-3">{service.title}</h3>
@@ -339,7 +339,7 @@ const Home = () => {
             ))}
           </div>
           <div className="text-center mt-8">
-            <Button variant="outline" className="glass-card border-0 shadow-3d hover:shadow-3d-hover transition-all duration-300">View All Blog Posts</Button>
+            <Button variant="outline" className="glass-card transition-all duration-300">View All Blog Posts</Button>
           </div>
         </div>
       </section>

@@ -5,19 +5,19 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 transform hover:scale-105 hover:shadow-3d-hover",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 transform hover:scale-105 border",
   {
     variants: {
       variant: {
-        default: "bg-bank-primary text-white hover:bg-bank-primary/90 shadow-3d",
+        default: "bg-bank-primary text-white hover:bg-bank-primary/90 border-bank-primary",
         destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90 shadow-3d",
+          "bg-destructive text-destructive-foreground hover:bg-destructive/90 border-destructive",
         outline:
-          "glass-card border-0 text-bank-primary hover:shadow-3d-hover backdrop-blur-md",
+          "glass-card border-gray-200 text-bank-primary hover:bg-gray-50 backdrop-blur-md",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-3d",
-        ghost: "hover:bg-accent hover:text-accent-foreground transition-all duration-200",
-        link: "text-bank-primary underline-offset-4 hover:underline hover:text-bank-accent",
+          "bg-secondary text-secondary-foreground hover:bg-secondary/80 border-secondary",
+        ghost: "border-transparent hover:bg-accent hover:text-accent-foreground transition-all duration-200",
+        link: "border-transparent text-bank-primary underline-offset-4 hover:underline hover:text-bank-accent",
       },
       size: {
         default: "h-10 px-4 py-2",

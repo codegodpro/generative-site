@@ -95,11 +95,11 @@ const Personal = () => {
               From everyday checking to long-term investments, we have the tools to help you succeed.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-bank-accent text-bank-primary hover:bg-bank-accent/90 shadow-3d hover:shadow-3d-hover">
+              <Button size="lg" className="bg-bank-accent text-bank-primary hover:bg-bank-accent/90">
                 Get Started Today
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button size="lg" variant="outline" className="glass-card border-white text-white hover:bg-white hover:text-bank-primary shadow-3d hover:shadow-3d-hover">
+              <Button size="lg" variant="outline" className="glass-card border-white text-white hover:bg-white hover:text-bank-primary">
                 Schedule Appointment
               </Button>
             </div>
@@ -121,7 +121,7 @@ const Personal = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="glass-card shadow-3d hover:shadow-3d-hover card-3d border-0">
+              <Card key={index} className="glass-card border transform transition-all duration-300 hover:scale-105">
                 <CardHeader>
                   <div className="icon-container mb-4">
                     <service.icon className="h-6 w-6 text-bank-primary" />
@@ -140,7 +140,7 @@ const Personal = () => {
                     ))}
                   </div>
                   
-                   <Button className="w-full bg-bank-primary hover:bg-bank-primary/90 text-white shadow-3d hover:shadow-3d-hover transition-all duration-300">
+                   <Button className="w-full bg-bank-primary hover:bg-bank-primary/90 text-white transition-all duration-300">
                      {service.cta}
                    </Button>
                 </CardContent>
@@ -205,7 +205,7 @@ const Personal = () => {
                 </div>
               </div>
               
-              <Card className="glass-card shadow-3d border-0">
+              <Card className="glass-card border">
                 <CardHeader>
                   <CardTitle className="text-center">Savings Calculator</CardTitle>
                 </CardHeader>
@@ -226,7 +226,7 @@ const Personal = () => {
                     </div>
                   </div>
                   
-                  <Button className="w-full bg-bank-accent text-bank-primary hover:bg-bank-accent/90 shadow-3d hover:shadow-3d-hover transition-all duration-300">
+                  <Button className="w-full bg-bank-accent text-bank-primary hover:bg-bank-accent/90 transition-all duration-300">
                     Open Savings Account
                   </Button>
                 </CardContent>
@@ -246,11 +246,11 @@ const Personal = () => {
             Join thousands of satisfied customers who have made the switch to SecureBank for their personal banking needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-bank-accent text-bank-primary hover:bg-bank-accent/90 shadow-3d hover:shadow-3d-hover">
+            <Button size="lg" className="bg-bank-accent text-bank-primary hover:bg-bank-accent/90">
               Open Account Now
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button size="lg" variant="outline" className="glass-card border-white text-white hover:bg-white hover:text-bank-primary shadow-3d hover:shadow-3d-hover">
+            <Button size="lg" variant="outline" className="glass-card border-white text-white hover:bg-white hover:text-bank-primary">
               Talk to an Agent
             </Button>
           </div>

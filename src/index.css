@@ -150,7 +150,6 @@ All colors MUST be HSL.
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     backdrop-filter: blur(10px);
-    box-shadow: var(--shadow-3d);
     @apply rounded-2xl;
   }
   
@@ -158,24 +157,14 @@ All colors MUST be HSL.
     background: rgba(255, 255, 255, 0.8);
     border-bottom: 1px solid var(--glass-border);
     backdrop-filter: blur(15px);
-    @apply shadow-lg;
   }
   
   .dark .glass-nav {
     background: rgba(0, 0, 0, 0.2);
   }
   
-  .shadow-3d {
-    box-shadow: var(--shadow-3d);
-  }
-  
-  .shadow-3d-hover {
-    box-shadow: var(--shadow-hover);
-    transform: translateY(-2px);
-  }
-  
   .icon-container {
-    @apply bg-white border border-solid border-gray-200 rounded-xl p-3 shadow-sm transition-all duration-200 hover:shadow-md;
+    @apply bg-white border border-solid border-gray-200 rounded-xl p-3 transition-all duration-200;
   }
   
   .dark .icon-container {
@@ -183,6 +172,6 @@ All colors MUST be HSL.
   }
   
   .card-3d {
-    @apply transform transition-all duration-300 hover:shadow-3d-hover hover:-translate-y-1;
+    @apply transform transition-all duration-300 hover:-translate-y-1;
   }
 }

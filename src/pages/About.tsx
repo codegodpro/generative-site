@@ -125,19 +125,19 @@ const About = () => {
               </p>
             </div>
             <div className="grid grid-cols-2 gap-6">
-              <div className="glass-card p-6 shadow-3d hover:shadow-3d-hover card-3d">
+              <div className="glass-card border p-6 transform transition-all duration-300 hover:scale-105">
                 <div className="text-2xl font-bold text-bank-primary mb-2">500K+</div>
                 <div className="text-sm text-muted-foreground">Customers Served</div>
               </div>
-              <div className="glass-card p-6 shadow-3d hover:shadow-3d-hover card-3d">
+              <div className="glass-card border p-6 transform transition-all duration-300 hover:scale-105">
                 <div className="text-2xl font-bold text-bank-primary mb-2">$2B+</div>
                 <div className="text-sm text-muted-foreground">Assets Under Management</div>
               </div>
-              <div className="glass-card p-6 shadow-3d hover:shadow-3d-hover card-3d">
+              <div className="glass-card border p-6 transform transition-all duration-300 hover:scale-105">
                 <div className="text-2xl font-bold text-bank-primary mb-2">150+</div>
                 <div className="text-sm text-muted-foreground">Branch Locations</div>
               </div>
-              <div className="glass-card p-6 shadow-3d hover:shadow-3d-hover card-3d">
+              <div className="glass-card border p-6 transform transition-all duration-300 hover:scale-105">
                 <div className="text-2xl font-bold text-bank-primary mb-2">50+</div>
                 <div className="text-sm text-muted-foreground">Years of Excellence</div>
               </div>
@@ -189,7 +189,7 @@ const About = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <Card key={index} className="glass-card shadow-3d hover:shadow-3d-hover card-3d border-0">
+              <Card key={index} className="glass-card border transform transition-all duration-300 hover:scale-105">
                 <CardContent className="p-8 text-center">
                   <div className="icon-container mx-auto mb-6 w-fit">
                     <value.icon className="h-8 w-8 text-bank-primary" />
@@ -215,7 +215,7 @@ const About = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {team.map((member, index) => (
-              <Card key={index} className="glass-card shadow-3d hover:shadow-3d-hover card-3d border-0">
+              <Card key={index} className="glass-card border transform transition-all duration-300 hover:scale-105">
                 <CardContent className="p-8">
                   <div className="flex items-start space-x-4">
                     <div className="icon-container">
