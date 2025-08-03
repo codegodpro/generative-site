@@ -117,20 +117,24 @@ const Home = () => {
             <CarouselContent className="-ml-2 md:-ml-4">
               {promotionalCards.map((card, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/4">
-                  <Card className={`${card.color} border-0 overflow-hidden card-3d shadow-3d transform transition-all duration-300 hover:scale-105`}>
-                    <CardContent className="p-6">
-                      <div className={card.textColor}>
+                  <Card className="glass-card border-0 overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-3d-hover">
+                    <div 
+                      className="relative h-48 bg-cover bg-center" 
+                      style={{ backgroundImage: `url(${card.image})` }}
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                      <CardContent className="absolute bottom-0 left-0 right-0 p-6 text-white">
                         <h3 className="font-bold text-lg mb-2">{card.title}</h3>
-                        <p className="text-2xl font-bold mb-1">{card.subtitle}</p>
+                        <p className="text-xl font-bold mb-1">{card.subtitle}</p>
                         <p className="text-sm opacity-90">{card.description}</p>
-                      </div>
-                    </CardContent>
+                      </CardContent>
+                    </div>
                   </Card>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="glass-card border-0 shadow-3d hover:shadow-3d-hover" />
-            <CarouselNext className="glass-card border-0 shadow-3d hover:shadow-3d-hover" />
+            <CarouselPrevious className="glass-card border-0 shadow-3d hover:shadow-3d-hover text-bank-primary" />
+            <CarouselNext className="glass-card border-0 shadow-3d hover:shadow-3d-hover text-bank-primary" />
           </Carousel>
         </div>
       </section>
@@ -213,10 +217,10 @@ const Home = () => {
                   </div>
                   
                   <div className="flex gap-3 mt-6">
-                    <Button className="flex-1 bg-pink-500 hover:bg-pink-600 text-white shadow-3d hover:shadow-3d-hover transition-all duration-300">
+                    <Button className="flex-1 bg-bank-primary hover:bg-bank-primary/90 text-white shadow-3d hover:shadow-3d-hover transition-all duration-300">
                       Apply Now
                     </Button>
-                    <Button variant="outline" className="flex-1 shadow-3d hover:shadow-3d-hover transition-all duration-300">
+                    <Button variant="outline" className="flex-1 glass-card border-0 shadow-3d hover:shadow-3d-hover transition-all duration-300">
                       Loan Details
                     </Button>
                   </div>
@@ -236,7 +240,7 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
             {services.map((service, index) => (
-              <Card key={index} className="text-center card-3d glass-card cursor-pointer">
+              <Card key={index} className="text-center glass-card cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-3d-hover">
                 <CardContent className="p-4">
                   <div className="icon-container mx-auto mb-2 w-fit">
                     <service.icon className="h-6 w-6 text-bank-primary" />
@@ -255,7 +259,7 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
             {additionalServices.map((service, index) => (
-              <Card key={index} className="text-center card-3d glass-card cursor-pointer">
+              <Card key={index} className="text-center glass-card cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-3d-hover">
                 <CardContent className="p-6">
                   <div className="icon-container mx-auto mb-3 w-fit">
                     <service.icon className="h-8 w-8 text-bank-primary" />
@@ -288,8 +292,8 @@ const Home = () => {
                 ))}
               </div>
               <div className="flex gap-3 mt-6 justify-center">
-                <Button variant="outline" size="sm" className="shadow-3d hover:shadow-3d-hover transition-all duration-300">View All Rates</Button>
-                <Button className="bg-pink-500 hover:bg-pink-600 text-white shadow-3d hover:shadow-3d-hover transition-all duration-300" size="sm">Exchange Calculator</Button>
+                <Button variant="outline" size="sm" className="glass-card border-0 shadow-3d hover:shadow-3d-hover transition-all duration-300">View All Rates</Button>
+                <Button className="bg-bank-primary hover:bg-bank-primary/90 text-white shadow-3d hover:shadow-3d-hover transition-all duration-300" size="sm">Exchange Calculator</Button>
               </div>
             </CardContent>
           </Card>
@@ -302,7 +306,7 @@ const Home = () => {
           <h2 className="text-2xl font-bold text-bank-primary mb-6">SecureBank News</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
             {newsArticles.map((article, index) => (
-              <Card key={index} className="card-3d glass-card">
+              <Card key={index} className="glass-card transform transition-all duration-300 hover:scale-105 hover:shadow-3d-hover">
                 <CardContent className="p-6">
                   <h3 className="font-semibold text-bank-primary mb-3">{article.title}</h3>
                   <p className="text-sm text-muted-foreground mb-4">{article.description}</p>
@@ -313,7 +317,7 @@ const Home = () => {
             ))}
           </div>
           <div className="text-center">
-            <Button variant="outline">View All News</Button>
+            <Button variant="outline" className="glass-card border-0 shadow-3d hover:shadow-3d-hover transition-all duration-300">View All News</Button>
           </div>
         </div>
       </section>
@@ -324,7 +328,7 @@ const Home = () => {
           <h2 className="text-2xl font-bold text-bank-primary mb-6 text-center">With You at Every Moment of Life!</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {lifeServices.map((service, index) => (
-              <Card key={index} className="card-3d glass-card">
+              <Card key={index} className="glass-card transform transition-all duration-300 hover:scale-105 hover:shadow-3d-hover">
                 <CardContent className="p-6">
                   <div className="text-4xl mb-4">{service.image}</div>
                   <h3 className="font-semibold text-bank-primary mb-3">{service.title}</h3>
@@ -335,7 +339,7 @@ const Home = () => {
             ))}
           </div>
           <div className="text-center mt-8">
-            <Button variant="outline">View All Blog Posts</Button>
+            <Button variant="outline" className="glass-card border-0 shadow-3d hover:shadow-3d-hover transition-all duration-300">View All Blog Posts</Button>
           </div>
         </div>
       </section>
