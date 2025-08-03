@@ -147,7 +147,7 @@ const Contact = () => {
                       />
                     </div>
                     
-                    <Button className="w-full bg-bank-primary hover:bg-bank-primary/90 text-white">
+                    <Button className="w-full bg-bank-primary hover:bg-bank-primary/90 text-white shadow-3d hover:shadow-3d-hover transition-all duration-300">
                       Send Message
                       <Send className="ml-2 h-5 w-5" />
                     </Button>
@@ -165,7 +165,7 @@ const Contact = () => {
               
               <div className="space-y-6">
                 {branches.map((branch, index) => (
-                  <Card key={index} className="border-border shadow-lg">
+                  <Card key={index} className="glass-card shadow-3d border-0">
                     <CardHeader>
                       <CardTitle className="text-lg text-bank-primary">{branch.name}</CardTitle>
                     </CardHeader>
@@ -190,7 +190,7 @@ const Contact = () => {
               </div>
               
               <div className="mt-8">
-                <Button className="w-full bg-bank-accent text-bank-primary hover:bg-bank-accent/90">
+                <Button className="w-full bg-bank-accent text-bank-primary hover:bg-bank-accent/90 shadow-3d hover:shadow-3d-hover transition-all duration-300">
                   Find All Locations
                 </Button>
               </div>
@@ -211,28 +211,28 @@ const Contact = () => {
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-              <Card className="border-border shadow-lg">
+              <Card className="glass-card shadow-3d border-0">
                 <CardContent className="p-6">
                   <h3 className="font-semibold text-foreground mb-2">What are your customer service hours?</h3>
                   <p className="text-muted-foreground">Our customer service is available 24/7 by phone. Online chat support is available Monday-Friday 8am-8pm EST.</p>
                 </CardContent>
               </Card>
               
-              <Card className="border-border shadow-lg">
+              <Card className="glass-card shadow-3d border-0">
                 <CardContent className="p-6">
                   <h3 className="font-semibold text-foreground mb-2">How do I open a new account?</h3>
                   <p className="text-muted-foreground">You can open an account online, by phone, or by visiting any of our branch locations. The process typically takes 15-20 minutes.</p>
                 </CardContent>
               </Card>
               
-              <Card className="border-border shadow-lg">
+              <Card className="glass-card shadow-3d border-0">
                 <CardContent className="p-6">
                   <h3 className="font-semibold text-foreground mb-2">Is mobile banking secure?</h3>
                   <p className="text-muted-foreground">Yes, our mobile banking uses bank-level encryption, biometric authentication, and real-time fraud monitoring to protect your accounts.</p>
                 </CardContent>
               </Card>
               
-              <Card className="border-border shadow-lg">
+              <Card className="glass-card shadow-3d border-0">
                 <CardContent className="p-6">
                   <h3 className="font-semibold text-foreground mb-2">What if I lose my debit card?</h3>
                   <p className="text-muted-foreground">Report lost cards immediately through our mobile app, online banking, or by calling our 24/7 customer service line for immediate card blocking.</p>

@@ -95,11 +95,11 @@ const Personal = () => {
               From everyday checking to long-term investments, we have the tools to help you succeed.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-bank-accent text-bank-primary hover:bg-bank-accent/90">
+              <Button size="lg" className="bg-bank-accent text-bank-primary hover:bg-bank-accent/90 shadow-3d hover:shadow-3d-hover">
                 Get Started Today
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-bank-primary">
+              <Button size="lg" variant="outline" className="glass-card border-white text-white hover:bg-white hover:text-bank-primary shadow-3d hover:shadow-3d-hover">
                 Schedule Appointment
               </Button>
             </div>
@@ -205,7 +205,7 @@ const Personal = () => {
                 </div>
               </div>
               
-              <Card className="border-border shadow-lg">
+              <Card className="glass-card shadow-3d border-0">
                 <CardHeader>
                   <CardTitle className="text-center">Savings Calculator</CardTitle>
                 </CardHeader>
@@ -226,7 +226,7 @@ const Personal = () => {
                     </div>
                   </div>
                   
-                  <Button className="w-full bg-bank-accent text-bank-primary hover:bg-bank-accent/90">
+                  <Button className="w-full bg-bank-accent text-bank-primary hover:bg-bank-accent/90 shadow-3d hover:shadow-3d-hover transition-all duration-300">
                     Open Savings Account
                   </Button>
                 </CardContent>
@@ -246,11 +246,11 @@ const Personal = () => {
             Join thousands of satisfied customers who have made the switch to SecureBank for their personal banking needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-bank-accent text-bank-primary hover:bg-bank-accent/90">
+            <Button size="lg" className="bg-bank-accent text-bank-primary hover:bg-bank-accent/90 shadow-3d hover:shadow-3d-hover">
               Open Account Now
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-bank-primary">
+            <Button size="lg" variant="outline" className="glass-card border-white text-white hover:bg-white hover:text-bank-primary shadow-3d hover:shadow-3d-hover">
               Talk to an Agent
             </Button>
           </div>

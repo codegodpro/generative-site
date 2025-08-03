@@ -113,11 +113,11 @@ const Commercial = () => {
               to enterprise cash management, we provide the tools and expertise to fuel your growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-bank-accent text-bank-primary hover:bg-bank-accent/90">
+              <Button size="lg" className="bg-bank-accent text-bank-primary hover:bg-bank-accent/90 shadow-3d hover:shadow-3d-hover">
                 Schedule Meeting
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-bank-primary">
+              <Button size="lg" variant="outline" className="glass-card border-white text-white hover:bg-white hover:text-bank-primary shadow-3d hover:shadow-3d-hover">
                 Get Consultation
               </Button>
             </div>
@@ -236,7 +236,7 @@ const Commercial = () => {
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {['Technology', 'Healthcare', 'Manufacturing', 'Retail', 'Real Estate', 'Professional Services', 'Hospitality', 'Construction'].map((industry, index) => (
-                <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
+                <div key={index} className="glass-card p-6 rounded-lg shadow-3d hover:shadow-3d-hover transform transition-all duration-300 hover:scale-105">
                   <div className="text-bank-primary font-semibold">{industry}</div>
                 </div>
               ))}
@@ -257,11 +257,11 @@ const Commercial = () => {
               Schedule a consultation with our business banking specialists today.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-              <Button size="lg" className="bg-bank-accent text-bank-primary hover:bg-bank-accent/90">
+              <Button size="lg" className="bg-bank-accent text-bank-primary hover:bg-bank-accent/90 shadow-3d hover:shadow-3d-hover">
                 Schedule Meeting
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-bank-primary">
+              <Button size="lg" variant="outline" className="glass-card border-white text-white hover:bg-white hover:text-bank-primary shadow-3d hover:shadow-3d-hover">
                 Apply Now
               </Button>
             </div>
